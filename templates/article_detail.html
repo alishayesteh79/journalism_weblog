@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h4>- {{article.title}}</h4>
+<p>""{{article.body}}""</p>
+<p>created by : {{article.author}}</p>
+<p><a href="{% url 'article_edit' article.pk%}">edit</a>  |  <a href="{% url 'article_delete' article.pk%}">delete</a></p>
+<p><a href="{% url 'article_list' %}">Back to article list</a></p>
+{% endblock content %}
+

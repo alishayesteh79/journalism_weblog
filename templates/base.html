@@ -1,3 +1,6 @@
 <h1>welcome to <a href="{% url 'home' %}">ALI BLOG</a></h1>
+{% if user.is_authenticated %}
+<a href="{% url 'article_new'%}">+ new article</a>
+{% endif %}
 {%block content%}
 {%endblock content%}
