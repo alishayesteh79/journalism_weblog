@@ -5,7 +5,7 @@
 {%for article in article_list %}
 <h4><a href="{% url 'article_detail' article.pk %}">{{article.title}}</a></h4>
 <p>""{{article.body}}""</p>
-<p>created by : {{article.author}}</p>
+<p>created by : {{article.author}} on {{article.date_time}}</p>
 <p><a href="{% url 'article_edit' article.pk%}">edit</a>  |  <a href="{% url 'article_delete' article.pk%}">delete</a></p>
 <p>------------------------------------</p>
 
